@@ -357,7 +357,7 @@ Sub fopen(file As String, mode as Integer)
 Sub fopen(file As String, Optional mode as Integer = 0, Optional pword As String = "")
 ```
 
-请注意，公共 API 中的可选参数不符合 CLS 規格。 但是，它们可供至少 Visual Basic 和 C# 4 和 F #。
+请注意，公共 API 中的可选参数不符合 CLS 規格。 但是，它们可供至少 Visual Basic 和 C# 4 和F#。
 
 
 
@@ -2271,7 +2271,7 @@ End Module
 
 此规则的例外： 成员隐式或显式使用限定`Me`已免除上述限制，因为`Me`始终保证是一个实际对象，不是一个代理。
 
-## <a name="properties"></a>属性
+## <a name="properties"></a>Properties
 
 *属性*是变量的自然扩展; 两者都命名成员与相关的类型，而且用于访问变量和属性的语法是一样的。 与变量不同，但是，属性不表示存储位置。 相反，属性有*访问器*，它指定要读取或写入它们的值执行的语句。
 
