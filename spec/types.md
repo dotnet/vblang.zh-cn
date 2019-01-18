@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6815d084e180bb615fcc5c880e2ee5127b56c4a4
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426643"
+---
 # <a name="types"></a>类型
 
 在 Visual Basic 中的类型的两个基本类别如下*值类型*并*引用类型*。 基元类型 （除了字符串）、 枚举和结构是值类型。 类、 字符串、 标准模块、 接口、 数组和委托是引用类型。

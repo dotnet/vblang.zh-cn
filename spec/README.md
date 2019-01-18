@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6963cee85e9d8d8ab9d26fafce94e2c53747cea7
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426632"
+---
 <a name="visual-basic-language-specification"></a>Visual Basic 语言规范
 =====================================
 __版本 11__

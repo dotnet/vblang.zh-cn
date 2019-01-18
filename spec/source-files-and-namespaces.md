@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2e917b7aa27afd8a91e8c289e7454785d01bdda8
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426637"
+---
 # <a name="source-files-and-namespaces"></a>源文件和命名空间
 
 Visual Basic 程序由一个或多个源文件组成。 编译计划后，所有源文件一起处理;因此，源文件可以互相依赖，可能是以循环方式，而无需前向声明。 文本的程序文本中的声明顺序通常是没有意义。

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8a36506d9fce1605cf3758536f51782ea7680e84
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426613"
+---
 # <a name="documentation-comments"></a>文档注释
 
 文档注释是特殊格式进行分析以生成有关其附加到的代码文档的源中的注释。 文档注释的基本格式为 XML。 当包含文档注释的编译代码，编译器可能会选择性地将发出一个 XML 文件，代表源中的文档注释的总和。 此 XML 文件然后可由其他工具来生成印刷品或联机文档。

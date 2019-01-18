@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7286ee117cae82b03ebd92130383bd6051431100
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426640"
+---
 # <a name="attributes"></a>特性
 
 Visual Basic 语言使程序员能够指定修饰符上声明，表示正在声明的实体有关的信息。 例如，附加和修饰符类方法`Public`， `Protected`， `Friend`， `Protected Friend`，或`Private`指定其可访问性。

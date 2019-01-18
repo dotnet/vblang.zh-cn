@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a7e901ccba9f89ff7c414cceeccb3660332b0d53
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426646"
+---
 # <a name="type-members"></a>类型成员
 
 类型成员定义的存储位置和可执行代码。 它们可以是方法、 构造函数、 事件、 常量、 变量和属性。

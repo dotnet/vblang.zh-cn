@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 56482503cc5ca005d7d0f405874e778cea0c3ed5
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426639"
+---
 ### <a name="overloaded-method-resolution"></a>解决方法的重载的方法
 
 在实践中，用于确定重载决策规则旨在查找是"最靠近"提供的实际自变量的重载。 如果其参数类型与参数类型匹配的方法，则显然最接近该方法。 不包括，一种方法更接近于另一个如果所有的参数类型都是窄于 （或相同） 的另一种方法的参数类型。 如果这两种方法的参数比其他更窄，则没有办法来确定哪种方法是更接近于自变量。

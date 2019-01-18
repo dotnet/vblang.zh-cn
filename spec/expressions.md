@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2cfc4380cd0a27f0aed9011406b2aa0ef4f7d23f
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426659"
+---
 # <a name="expressions"></a>表达式
 
 表达式是一系列运算符和操作数指定的一个值，计算值或指定变量或常量。 本章定义的语法，操作数和运算符的求值和表达式的含义的顺序。
@@ -98,7 +106,7 @@ Expression
     
   如果从任何委托的参数类型到相应的 lambda 参数类型的转换是收缩转换，然后重新分类被判定为收缩;否则它为扩大转换。
     
-  __请注意。__ Lambda 方法和表达式树之间的确切转换可能不会修复之间版本的编译器和超出了本规范的范畴。 For Microsoft Visual Basic 11.0，所有的 lambda 表达式可能会转换为表达式树有以下限制：（1) 1。  仅单行 lambda 表达式而无需 ByRef 参数可能会转换为表达式树。 单个行的`Sub`lambda，唯一的调用语句可能会转换为表达式树。 （如果早期的字段初始值设定项用于初始化的后续字段初始值设定项，例如 2） 匿名类型的表达式不能转换为表达式树`New With {.a=1, .b=.a}`。 （3） 对象初始值设定项表达式无法转换为表达式树如果当前对象进行初始化的成员将用在一个字段初始值设定项，例如`New C1 With {.a=1, .b=.Method1()}`。 （4） 多维数组创建表达式只可以转换为表达式树，如果它们显式声明它们的元素类型。 （5） Late 绑定表达式无法转换为表达式树。 （一般 VB 语义 6） 当变量或字段到调用表达式传递 ByRef 但不具有 ByRef 参数的类型完全相同或 ByRef 传递属性时，都将 ByRef 传递自变量的副本，然后复制其最终值 恢复到的变量或字段或属性。 在表达式树中，复制后不会发生。 （7） 所有这些限制适用于以及嵌套的 lambda 表达式。
+  __请注意。__ Lambda 方法和表达式树之间的确切转换可能不会修复之间版本的编译器和超出了本规范的范畴。 For Microsoft Visual Basic 11.0，所有的 lambda 表达式可能会转换为表达式树有以下限制：(1) 1.  仅单行 lambda 表达式而无需 ByRef 参数可能会转换为表达式树。 单个行的`Sub`lambda，唯一的调用语句可能会转换为表达式树。 （如果早期的字段初始值设定项用于初始化的后续字段初始值设定项，例如 2） 匿名类型的表达式不能转换为表达式树`New With {.a=1, .b=.a}`。 （3） 对象初始值设定项表达式无法转换为表达式树如果当前对象进行初始化的成员将用在一个字段初始值设定项，例如`New C1 With {.a=1, .b=.Method1()}`。 （4） 多维数组创建表达式只可以转换为表达式树，如果它们显式声明它们的元素类型。 （5） Late 绑定表达式无法转换为表达式树。 （一般 VB 语义 6） 当变量或字段到调用表达式传递 ByRef 但不具有 ByRef 参数的类型完全相同或 ByRef 传递属性时，都将 ByRef 传递自变量的副本，然后复制其最终值 恢复到的变量或字段或属性。 在表达式树中，复制后不会发生。 （7） 所有这些限制适用于以及嵌套的 lambda 表达式。
     
   如果不知道目标类型，则 lambda 方法解释为匿名委托类型的委托实例化表达式具有相同签名的 lambda 方法的参数。 如果正在使用严格的语义，并且会省略任何参数的类型，会发生编译时错误;否则为`Object`替换为任何缺少的参数类型。 例如：
     
@@ -2071,7 +2079,7 @@ UnaryPlusExpression
 __操作类型：__
 
 
-| __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+| __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|----|----|
 | Sh | SB | 间距 | Sh | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 
@@ -2094,7 +2102,7 @@ UnaryMinusExpression
 
 __操作类型：__
 
-| __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+| __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|----|----|
 | Sh | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 
@@ -2123,23 +2131,23 @@ AdditionOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|----|----|
 | __bo__ | Sh | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
-| __de__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该 | Ob | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该 | Ob | 
+| __De__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该 | Ob | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该 | Ob | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该 | Ob | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | st  | Err | st | Ob | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | st  | st | Ob | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | st | Ob | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | St  | Err | St | Ob | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | St  | St | Ob | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | St | Ob | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |    | Ob | 
 
 
@@ -2165,23 +2173,23 @@ SubtractionOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | Sh | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2205,23 +2213,23 @@ MultiplicationOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | Sh | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2254,23 +2262,23 @@ IntegerDivisionOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __SB__ |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __通过__ |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Sh__ |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __我们__ |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __US__ |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __In__ |    |    |    |    |    | 应该 | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UI__ |    |    |    |    |    |    | 应该 | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | 应该 | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | 应该 | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 为定义整数除法运算符`Byte`， `SByte`， `UShort`， `Short`， `UInteger`， `Integer`， `ULong`，和`Long`。 如果右操作数的值为零，`System.DivideByZeroException`引发异常。 该除法运算将舍入到零，结果和结果的绝对值是小于两个操作数的商的绝对值的最大可能整数。 两个操作数具有相同的符号和零或负数时两个操作数具有符号相反时，则结果为零或正数。 如果左的操作数是最大负`SByte`， `Short`， `Integer`，或`Long`，和右操作数是`-1`，则发生溢出; 如果整数溢出检查位于`System.OverflowException`引发异常。 否则为不报告溢出，结果而是为左操作数的值。
@@ -2280,23 +2288,23 @@ __请注意。__ 无符号类型的两个操作数始终为零或正数，结果
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | Sh | SB | Sh | Sh | 内 | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Lo | Lo | Err | Err | Lo  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | Lo | Err | Err | Lo  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | Lo  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | Lo  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2320,23 +2328,23 @@ ModuloOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | Sh | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | de | de | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2354,23 +2362,23 @@ ExponentOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __SB__ |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __通过__ |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __Sh__ |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
-| __我们__ |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
+| __US__ |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __In__ |    |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __UI__ |    |    |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | 应该 | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | 应该 | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | 应该 | 应该 | Err | Err | 应该  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | 应该 | 应该 | 应该 | Err | Err | 应该  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | 应该 | 应该 | Err | Err | 应该  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | 应该  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2423,23 +2431,23 @@ RelationalOperatorExpression
 
 __操作类型：__
         
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|----|----|
 | __bo__ | bo | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | bo | Ob | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | de | de | Si | 应该 | Err | Err | 应该 | Ob | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | de | Si | 应该 | Err | Err | 应该 | Ob | 
-| __de__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该 | Ob | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该 | Ob | 
+| __De__ |    |    |    |    |    |    |    |    |    | de | Si | 应该 | Err | Err | 应该 | Ob | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Si | 应该 | Err | Err | 应该 | Ob | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | 应该 | Err | Err | 应该 | Ob | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | da  | Err | da | Ob | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | ch  | st | Ob | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | st | Ob | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | da  | Err | da | Ob | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | ch  | St | Ob | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | St | Ob | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |    | Ob | 
 
 
@@ -2477,23 +2485,23 @@ LikeOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
-| __bo__ | st | st | st | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __SB__ |    | st | st | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __通过__ |    |    | st | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __Sh__ |    |    |    | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __我们__ |    |    |    |    | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __In__ |    |    |    |    |    | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __UI__ |    |    |    |    |    |    | st | st | st | st | st | st | st | st | st | Ob | 
-| __Lo__ |    |    |    |    |    |    |    | st | st | st | st | st | st | st | st | Ob | 
-| __UL__ |    |    |    |    |    |    |    |    | st | st | st | st | st | st | st | Ob | 
-| __de__ |    |    |    |    |    |    |    |    |    | st | st | st | st | st | st | Ob | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | st | st | st | st | st | Ob | 
-| __Do__ |    |    |    |    |    |    |    |    |    |    |    | st | st | st | st | Ob | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | st | st | st | Ob | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |    | st | st | Ob | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |    |    | st | Ob | 
+| __bo__ | St | St | St | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __SB__ |    | St | St | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __通过__ |    |    | St | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __Sh__ |    |    |    | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __US__ |    |    |    |    | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __In__ |    |    |    |    |    | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __UI__ |    |    |    |    |    |    | St | St | St | St | St | St | St | St | St | Ob | 
+| __Lo__ |    |    |    |    |    |    |    | St | St | St | St | St | St | St | St | Ob | 
+| __UL__ |    |    |    |    |    |    |    |    | St | St | St | St | St | St | St | Ob | 
+| __De__ |    |    |    |    |    |    |    |    |    | St | St | St | St | St | St | Ob | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | St | St | St | St | St | Ob | 
+| __Do__ |    |    |    |    |    |    |    |    |    |    |    | St | St | St | St | Ob | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | St | St | St | Ob | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |    | St | St | Ob | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |    |    | St | Ob | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Ob | 
 
 
@@ -2511,23 +2519,23 @@ ConcatenationOperatorExpression
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
-| __bo__ | st | st | st | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __SB__ |    | st | st | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __通过__ |    |    | st | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __Sh__ |    |    |    | st | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __我们__ |    |    |    |    | st | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __In__ |    |    |    |    |    | st | st | st | st | st | st | st | st | st | st | Ob | 
-| __UI__ |    |    |    |    |    |    | st | st | st | st | st | st | st | st | st | Ob | 
-| __Lo__ |    |    |    |    |    |    |    | st | st | st | st | st | st | st | st | Ob | 
-| __UL__ |    |    |    |    |    |    |    |    | st | st | st | st | st | st | st | Ob | 
-| __de__ |    |    |    |    |    |    |    |    |    | st | st | st | st | st | st | Ob | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | st | st | st | st | st | Ob | 
-| __Do__ |    |    |    |    |    |    |    |    |    |    |    | st | st | st | st | Ob | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | st | st | st | Ob | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |    | st | st | Ob | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |    |    | st | Ob | 
+| __bo__ | St | St | St | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __SB__ |    | St | St | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __通过__ |    |    | St | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __Sh__ |    |    |    | St | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __US__ |    |    |    |    | St | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __In__ |    |    |    |    |    | St | St | St | St | St | St | St | St | St | St | Ob | 
+| __UI__ |    |    |    |    |    |    | St | St | St | St | St | St | St | St | St | Ob | 
+| __Lo__ |    |    |    |    |    |    |    | St | St | St | St | St | St | St | St | Ob | 
+| __UL__ |    |    |    |    |    |    |    |    | St | St | St | St | St | St | St | Ob | 
+| __De__ |    |    |    |    |    |    |    |    |    | St | St | St | St | St | St | Ob | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | St | St | St | St | St | Ob | 
+| __Do__ |    |    |    |    |    |    |    |    |    |    |    | St | St | St | St | Ob | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | St | St | St | Ob | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |    | St | St | Ob | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |    |    | St | Ob | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Ob | 
 
 
@@ -2595,29 +2603,29 @@ __请注意。__ 理想情况下，逻辑运算符`And`和`Or`将使用三值逻
 
 __不是操作类型：__
 
-| __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+| __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|----|----|
 | bo | SB | 间距 | Sh | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo | Ob | 
 
 __并且，或 Xor 操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | bo | SB | Sh | Sh | 内 | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | bo  | Ob  | 
 | __SB__ |    | SB | Sh | Sh | 内 | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __通过__ |    |    | 间距 | Sh | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __Sh__ |    |    |    | Sh | 内 | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
-| __我们__ |    |    |    |    | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
+| __US__ |    |    |    |    | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __In__ |    |    |    |    |    | 内 | Lo | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __UI__ |    |    |    |    |    |    | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | Lo | Lo | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | UL | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | Lo | Lo | Err | Err | Lo  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | Lo | Lo | Lo | Err | Err | Lo  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | Lo | Lo | Err | Err | Lo  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | Lo | Err | Err | Lo  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | Lo  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | Lo  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2705,23 +2713,23 @@ OrElse: True
 
 __操作类型：__
 
-|        | __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ |
+|        | __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ |
 |--------|----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|-----|-----|
 | __bo__ | bo | bo | bo | bo | bo | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __SB__ |    | bo | bo | bo | bo | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __通过__ |    |    | bo | bo | bo | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __Sh__ |    |    |    | bo | bo | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
-| __我们__ |    |    |    |    | bo | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
+| __US__ |    |    |    |    | bo | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __In__ |    |    |    |    |    | bo | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __UI__ |    |    |    |    |    |    | bo | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __Lo__ |    |    |    |    |    |    |    | bo | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
 | __UL__ |    |    |    |    |    |    |    |    | bo | bo | bo | bo | Err | Err | bo  | Ob  | 
-| __de__ |    |    |    |    |    |    |    |    |    | bo | bo | bo | Err | Err | bo  | Ob  | 
-| __si__ |    |    |    |    |    |    |    |    |    |    | bo | bo | Err | Err | bo  | Ob  | 
+| __De__ |    |    |    |    |    |    |    |    |    | bo | bo | bo | Err | Err | bo  | Ob  | 
+| __Si__ |    |    |    |    |    |    |    |    |    |    | bo | bo | Err | Err | bo  | Ob  | 
 | __Do__ |    |    |    |    |    |    |    |    |    |    |    | bo | Err | Err | bo  | Ob  | 
-| __da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
-| __ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
-| __st__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | bo  | Ob  | 
+| __Da__ |    |    |    |    |    |    |    |    |    |    |    |    | Err | Err | Err | Err | 
+| __Ch__ |    |    |    |    |    |    |    |    |    |    |    |    |     | Err | Err | Err | 
+| __St__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     | bo  | Ob  | 
 | __Ob__ |    |    |    |    |    |    |    |    |    |    |    |    |     |     |     | Ob  | 
 
 
@@ -2756,7 +2764,7 @@ ShiftOperatorExpression
 __操作类型：__
 
 
-| __bo__ | __SB__ | __通过__ | __Sh__ | __我们__ | __In__ | __UI__ | __Lo__ | __UL__ | __de__ | __si__ | __Do__ | __da__  | __ch__  | __st__ | __Ob__ | 
+| __bo__ | __SB__ | __通过__ | __Sh__ | __US__ | __In__ | __UI__ | __Lo__ | __UL__ | __De__ | __Si__ | __Do__ | __Da__  | __Ch__  | __St__ | __Ob__ | 
 |----|----|----|----|----|----|----|----|----|----|----|----|-----|-----|----|----|
 | Sh | SB | 间距 | Sh | US | 内 | UI | Lo | UL | Lo | Lo | Lo | Err | Err | Lo | Ob | 
 

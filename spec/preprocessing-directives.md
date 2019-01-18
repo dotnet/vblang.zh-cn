@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7ad305f4b85bce12f174511af5e5f0aa62a7cc0e
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426633"
+---
 # <a name="preprocessing-directives"></a>预处理指令
 
 后一个文件进行了词法分析，会发生几种类型的源预处理。 在最重要的是，条件编译中，确定哪些源处理的语法的语法;两个其他类型的指令-外部源指令和区域指令--提供有关源的元信息但是编译中不起作用。

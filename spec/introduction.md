@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 637b90ee9b164ebf6e152541de0aff6f7d791db1
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426614"
+---
 # <a name="introduction"></a>介绍
 
 在 Microsoft&reg; Visual Basic&reg;编程语言是用于 Microsoft.NET Framework 的高级编程语言。 尽管它在设计上是一种易于使用，并轻松了解语言，还有功能强大，足以满足需求的经验丰富的程序员。 Visual Basic 编程语言都具有一种语法类似于英语，提高清晰度和 Visual Basic 代码的可读性。 如有可能，而不是缩写、 首字母缩写词或特殊字符使用有意义的词或短语。 外来或不需要的语法通常允许但不是必需的。

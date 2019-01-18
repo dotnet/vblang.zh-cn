@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2f14161222741beb7505f5674b230f1881828b5d
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426636"
+---
 # <a name="lexical-grammar"></a>词法语法
 
 首先，编译 Visual Basic 程序需要将 Unicode 字符的原始流转换为一组有序词汇标记。 由于 Visual Basic 语言不是无格式，组标记然后进一步划分为一系列逻辑行。 一个*逻辑行*范围从流的起始行结束符通过到下一步前面没有由行继续符或通过到流的末尾的行终止符。

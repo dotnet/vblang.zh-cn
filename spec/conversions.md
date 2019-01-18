@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1476d208b3ca2cc7f47a458549455f64a3512e80
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426644"
+---
 # <a name="conversions"></a>转换
 
 转换是从一种类型的值更改为另一个的过程。 例如，类型的值`Integer`可转换为类型的值`Double`，或类型的值`Derived`可转换为类型的值`Base`、 假设`Base`和`Derived`类和`Derived`继承自`Base`。 转换可能不需要值本身进行更改 （后者如示例所示），或者它们可能要求 （如前一示例中） 的值表示形式中的重大更改。

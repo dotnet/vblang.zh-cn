@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: be4090cc1ee294342645029e327d33627e8473fe
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "49461351"
+---
 # <a name="general-concepts"></a>一般概念
 
 本章我们将介绍数都必需能识别的 Microsoft Visual Basic 语言的语义的概念。 许多概念应该熟悉的 Visual Basic 编程人员或 C/c + + 程序员提供的但其精确定义可能会不同。
