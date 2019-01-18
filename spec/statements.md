@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 68237df3f66ba1cec661e6580c27bb5beedd6b9a
+ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "47426647"
+---
 # <a name="statements"></a>语句
 
 语句表示的可执行代码。
@@ -1337,7 +1345,7 @@ ForEachStatement
     ;
 ```
 
-遵循相同的规则`For...Next`语句 (部分[对于...下一语句](statements.md#fornext-statements))，循环控制变量是指到特定的新本地变量这对于每个...下一个语句，或到预先存在的变量，或表达式。
+遵循相同的规则`For...Next`语句 (部分[对于。 ...下一语句](statements.md#fornext-statements))，循环控制变量是指到特定的新本地变量这对于每个...下一个语句，或到预先存在的变量，或表达式。
 
 枚举器表达式必须分类为一个值，并且其类型必须是集合类型或`Object`。 如果枚举器表达式的类型为`Object`，则所有的处理延迟到运行时。 否则，必须存在从转换集合的元素类型为循环控制变量的类型。
 
