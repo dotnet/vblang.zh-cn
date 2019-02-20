@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 56482503cc5ca005d7d0f405874e778cea0c3ed5
-ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "47426639"
----
-### <a name="overloaded-method-resolution"></a>解决方法的重载的方法
+# <a name="overloaded-method-resolution"></a>解决方法的重载的方法
 
 在实践中，用于确定重载决策规则旨在查找是"最靠近"提供的实际自变量的重载。 如果其参数类型与参数类型匹配的方法，则显然最接近该方法。 不包括，一种方法更接近于另一个如果所有的参数类型都是窄于 （或相同） 的另一种方法的参数类型。 如果这两种方法的参数比其他更窄，则没有办法来确定哪种方法是更接近于自变量。
 
@@ -271,7 +263,7 @@ __请注意。__ 重载决策不会考虑该方法的预期返回类型。
 
     76. 如果`M`不是扩展方法和`N`，消除`N`集中。
 
-    77. 如果`M`并`N`扩展方法和`M`之前找到`N`(部分[扩展方法集合](overload-resolution.md#extension-method-collection))，消除`N`集中。 例如：
+    77. 如果`M`并`N`扩展方法和`M`之前找到`N`(部分[扩展方法集合](expressions.md#extension-method-collection))，消除`N`集中。 例如：
 
         ```vb
         Imports System.Runtime.CompilerServices
