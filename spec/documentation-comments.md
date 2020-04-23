@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 8a36506d9fce1605cf3758536f51782ea7680e84
-ms.sourcegitcommit: 6eca149bdc736113e0adb709212bd266c9503c33
+ms.openlocfilehash: 54e674bedd587647436b859423ab0f14715eca2d
+ms.sourcegitcommit: 19ec79a287fb79180b05a0ad20e8291e75fc63df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "47426613"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080598"
 ---
-# <a name="documentation-comments"></a><span data-ttu-id="bdd03-101">文档注释</span><span class="sxs-lookup"><span data-stu-id="bdd03-101">Documentation Comments</span></span>
+# <a name="documentation-comments"></a><span data-ttu-id="39ed3-101">文档注释</span><span class="sxs-lookup"><span data-stu-id="39ed3-101">Documentation Comments</span></span>
 
-<span data-ttu-id="bdd03-102">文档注释是特殊格式进行分析以生成有关其附加到的代码文档的源中的注释。</span><span class="sxs-lookup"><span data-stu-id="bdd03-102">Documentation comments are specially formatted comments in the source that can be analyzed to produce documentation about the code they are attached to.</span></span> <span data-ttu-id="bdd03-103">文档注释的基本格式为 XML。</span><span class="sxs-lookup"><span data-stu-id="bdd03-103">The basic format for documentation comments is XML.</span></span> <span data-ttu-id="bdd03-104">当包含文档注释的编译代码，编译器可能会选择性地将发出一个 XML 文件，代表源中的文档注释的总和。</span><span class="sxs-lookup"><span data-stu-id="bdd03-104">When the compiling code with documentation comments, the compiler may optionally emit an XML file that represents the sum total of the documentation comments in the source.</span></span> <span data-ttu-id="bdd03-105">此 XML 文件然后可由其他工具来生成印刷品或联机文档。</span><span class="sxs-lookup"><span data-stu-id="bdd03-105">This XML file can then be used by other tools to produce printed or online documentation.</span></span>
+<span data-ttu-id="39ed3-102">文档注释是源中经过特殊格式的注释，可以进行分析，以生成有关它们附加到的代码的文档。</span><span class="sxs-lookup"><span data-stu-id="39ed3-102">Documentation comments are specially formatted comments in the source that can be analyzed to produce documentation about the code they are attached to.</span></span> <span data-ttu-id="39ed3-103">文档注释的基本格式是 XML。</span><span class="sxs-lookup"><span data-stu-id="39ed3-103">The basic format for documentation comments is XML.</span></span> <span data-ttu-id="39ed3-104">当编译代码包含文档注释时，编译器可以选择发出一个 XML 文件，该文件表示源中文档注释的总和。</span><span class="sxs-lookup"><span data-stu-id="39ed3-104">When the compiling code with documentation comments, the compiler may optionally emit an XML file that represents the sum total of the documentation comments in the source.</span></span> <span data-ttu-id="39ed3-105">然后，其他工具可以使用此 XML 文件生成打印或联机文档。</span><span class="sxs-lookup"><span data-stu-id="39ed3-105">This XML file can then be used by other tools to produce printed or online documentation.</span></span>
 
-<span data-ttu-id="bdd03-106">本章介绍了文档注释，建议用于文档注释的 XML 标记。</span><span class="sxs-lookup"><span data-stu-id="bdd03-106">This chapter describes document comments and recommended XML tags to use with document comments.</span></span>
+<span data-ttu-id="39ed3-106">本章介绍文档注释和建议与文档注释一起使用的 XML 标记。</span><span class="sxs-lookup"><span data-stu-id="39ed3-106">This chapter describes document comments and recommended XML tags to use with document comments.</span></span>
 
-## <a name="documentation-comment-format"></a><span data-ttu-id="bdd03-107">文档注释格式</span><span class="sxs-lookup"><span data-stu-id="bdd03-107">Documentation Comment Format</span></span>
+## <a name="documentation-comment-format"></a><span data-ttu-id="39ed3-107">文档注释格式</span><span class="sxs-lookup"><span data-stu-id="39ed3-107">Documentation Comment Format</span></span>
 
-<span data-ttu-id="bdd03-108">文档注释是开头的特殊注释`'''`，三个单引号标记。</span><span class="sxs-lookup"><span data-stu-id="bdd03-108">Document comments are special comments that begin with `'''`, three single quote marks.</span></span> <span data-ttu-id="bdd03-109">它们必须紧跟在记录的类型 （如类、 委托或接口） 或类型成员 （例如字段、 事件、 属性或方法）。</span><span class="sxs-lookup"><span data-stu-id="bdd03-109">They must immediately precede the type (such as a class, delegate, or interface) or type member (such as a field, event, property, or method) that they document.</span></span> <span data-ttu-id="bdd03-110">如果有的话，在提供其主体中，该方法的文档注释将被替换分部方法声明上的文档注释。</span><span class="sxs-lookup"><span data-stu-id="bdd03-110">A document comment on a partial method declaration will be replaced by the document comment on the method that supplies its body, if there is one.</span></span> <span data-ttu-id="bdd03-111">一起追加所有相邻的文档注释，以生成单个文档注释。</span><span class="sxs-lookup"><span data-stu-id="bdd03-111">All adjacent document comments are appended together to produce a single document comment.</span></span> <span data-ttu-id="bdd03-112">如果没有空格字符以下`'''`字符，则该空白字符不包括在串联。</span><span class="sxs-lookup"><span data-stu-id="bdd03-112">If there is a whitespace character following the `'''` characters, then that whitespace character is not included in the concatenation.</span></span> <span data-ttu-id="bdd03-113">例如：</span><span class="sxs-lookup"><span data-stu-id="bdd03-113">For example:</span></span>
+<span data-ttu-id="39ed3-108">文档注释是以`'''`、三个单引号开头的特殊注释。</span><span class="sxs-lookup"><span data-stu-id="39ed3-108">Document comments are special comments that begin with `'''`, three single quote marks.</span></span> <span data-ttu-id="39ed3-109">它们必须紧接在它们记录的类型（如类、委托或接口）或类型成员（如字段、事件、属性或方法）之前。</span><span class="sxs-lookup"><span data-stu-id="39ed3-109">They must immediately precede the type (such as a class, delegate, or interface) or type member (such as a field, event, property, or method) that they document.</span></span> <span data-ttu-id="39ed3-110">部分方法声明的文档注释将被提供其正文的方法的文档注释替换（如果有）。</span><span class="sxs-lookup"><span data-stu-id="39ed3-110">A document comment on a partial method declaration will be replaced by the document comment on the method that supplies its body, if there is one.</span></span> <span data-ttu-id="39ed3-111">所有相邻的文档注释都追加在一起，以生成单个文档注释。</span><span class="sxs-lookup"><span data-stu-id="39ed3-111">All adjacent document comments are appended together to produce a single document comment.</span></span> <span data-ttu-id="39ed3-112">如果`'''`字符后有一个空格字符，则该空白字符不包括在串联中。</span><span class="sxs-lookup"><span data-stu-id="39ed3-112">If there is a whitespace character following the `'''` characters, then that whitespace character is not included in the concatenation.</span></span> <span data-ttu-id="39ed3-113">例如：</span><span class="sxs-lookup"><span data-stu-id="39ed3-113">For example:</span></span>
 
 ```vb
 ''' <remarks>
@@ -29,67 +29,67 @@ Public Class Point
 End Class
 ```
 
-<span data-ttu-id="bdd03-114">文档注释必须格式正确的 XML 符合以下 http://www.w3.org/TR/REC-xml。</span><span class="sxs-lookup"><span data-stu-id="bdd03-114">Documentation comments must be well formed XML according to http://www.w3.org/TR/REC-xml.</span></span> <span data-ttu-id="bdd03-115">如果 XML 的格式不正确，则会生成警告，并且文档文件将包含条注释，指出遇到错误。</span><span class="sxs-lookup"><span data-stu-id="bdd03-115">If the XML is not well formed, a warning is generated and the documentation file will contain a comment saying that an error was encountered.</span></span>
+<span data-ttu-id="39ed3-114">文档注释必须根据 格式良好的https://www.w3.org/TR/REC-xmlXML。</span><span class="sxs-lookup"><span data-stu-id="39ed3-114">Documentation comments must be well formed XML according to https://www.w3.org/TR/REC-xml.</span></span> <span data-ttu-id="39ed3-115">如果 XML 格式不正确，将生成警告，文档文件将包含注释，指出遇到错误。</span><span class="sxs-lookup"><span data-stu-id="39ed3-115">If the XML is not well formed, a warning is generated and the documentation file will contain a comment saying that an error was encountered.</span></span>
 
-<span data-ttu-id="bdd03-116">尽管开发人员可以随意创建其自己的标记集下, 一节中定义一组推荐。</span><span class="sxs-lookup"><span data-stu-id="bdd03-116">Although developers are free to create their own set of tags, a recommended set is defined in the next section.</span></span> <span data-ttu-id="bdd03-117">部分建议标记具有特殊含义：</span><span class="sxs-lookup"><span data-stu-id="bdd03-117">Some of the recommended tags have special meanings:</span></span>
+<span data-ttu-id="39ed3-116">尽管开发人员可以自由创建自己的标记集，但建议的标记集在下一节中定义。</span><span class="sxs-lookup"><span data-stu-id="39ed3-116">Although developers are free to create their own set of tags, a recommended set is defined in the next section.</span></span> <span data-ttu-id="39ed3-117">部分建议标记具有特殊含义：</span><span class="sxs-lookup"><span data-stu-id="39ed3-117">Some of the recommended tags have special meanings:</span></span>
 
-* <span data-ttu-id="bdd03-118">`<param>`标记用于描述参数。</span><span class="sxs-lookup"><span data-stu-id="bdd03-118">The `<param>` tag is used to describe parameters.</span></span> <span data-ttu-id="bdd03-119">指定的参数`<param>`标记必须存在和类型成员的所有参数必须文档注释中所都述。</span><span class="sxs-lookup"><span data-stu-id="bdd03-119">The parameter specified by a `<param>` tag must exist and all parameters of the type member must be described in the documentation comment.</span></span> <span data-ttu-id="bdd03-120">如果任何一个条件未得到满足，编译器会发出警告。</span><span class="sxs-lookup"><span data-stu-id="bdd03-120">If either condition is not true, the compiler issues a warning.</span></span>
+* <span data-ttu-id="39ed3-118">标记`<param>`用于描述参数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-118">The `<param>` tag is used to describe parameters.</span></span> <span data-ttu-id="39ed3-119">`<param>`标记指定的参数必须存在，并且类型成员的所有参数都必须在文档注释中描述。</span><span class="sxs-lookup"><span data-stu-id="39ed3-119">The parameter specified by a `<param>` tag must exist and all parameters of the type member must be described in the documentation comment.</span></span> <span data-ttu-id="39ed3-120">如果任一条件都不正确，编译器将发出警告。</span><span class="sxs-lookup"><span data-stu-id="39ed3-120">If either condition is not true, the compiler issues a warning.</span></span>
 
-* <span data-ttu-id="bdd03-121">`cref` 属性可以附加到任何标记，以提供对代码元素的引用。</span><span class="sxs-lookup"><span data-stu-id="bdd03-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="bdd03-122">代码元素必须存在;在编译时编译器将名称替换为表示该成员的 ID 字符串。</span><span class="sxs-lookup"><span data-stu-id="bdd03-122">The code element must exist; at compile-time the compiler replaces the name with the ID string representing the member.</span></span> <span data-ttu-id="bdd03-123">如果代码元素不存在，编译器会发出警告。</span><span class="sxs-lookup"><span data-stu-id="bdd03-123">If the code element does not exist, the compiler issues a warning.</span></span> <span data-ttu-id="bdd03-124">当查找名称中所述`cref`特性，编译器仍会遵循`Imports`出现在包含源文件的语句。</span><span class="sxs-lookup"><span data-stu-id="bdd03-124">When looking for a name described in a `cref` attribute, the compiler respects `Imports` statements that appear within the containing source file.</span></span>
+* <span data-ttu-id="39ed3-121">`cref` 属性可以附加到任何标记，以提供对代码元素的引用。</span><span class="sxs-lookup"><span data-stu-id="39ed3-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="39ed3-122">代码元素必须存在;在编译时，编译器将名称替换为表示成员的 ID 字符串。</span><span class="sxs-lookup"><span data-stu-id="39ed3-122">The code element must exist; at compile-time the compiler replaces the name with the ID string representing the member.</span></span> <span data-ttu-id="39ed3-123">如果代码元素不存在，编译器将发出警告。</span><span class="sxs-lookup"><span data-stu-id="39ed3-123">If the code element does not exist, the compiler issues a warning.</span></span> <span data-ttu-id="39ed3-124">查找`cref`属性中描述的名称时，编译器会尊重`Imports`显示在包含源文件中的语句。</span><span class="sxs-lookup"><span data-stu-id="39ed3-124">When looking for a name described in a `cref` attribute, the compiler respects `Imports` statements that appear within the containing source file.</span></span>
 
-* <span data-ttu-id="bdd03-125">`<summary>`标记应使用文档查看器以显示有关类型或成员的其他信息。</span><span class="sxs-lookup"><span data-stu-id="bdd03-125">The `<summary>` tag is intended to be used by a documentation viewer to display additional information about a type or member.</span></span>
+* <span data-ttu-id="39ed3-125">文档`<summary>`查看器将使用该标记来显示有关类型或成员的其他信息。</span><span class="sxs-lookup"><span data-stu-id="39ed3-125">The `<summary>` tag is intended to be used by a documentation viewer to display additional information about a type or member.</span></span>
 
-<span data-ttu-id="bdd03-126">请注意，文档文件不提供文档注释中包含的内容仅相关类型和成员的完整信息。</span><span class="sxs-lookup"><span data-stu-id="bdd03-126">Note that the documentation file does not provide full information about a type and members, only what is contained in the document comments.</span></span> <span data-ttu-id="bdd03-127">若要获取有关类型或成员的详细信息，必须与实际类型或成员上反射结合使用的文档文件。</span><span class="sxs-lookup"><span data-stu-id="bdd03-127">To get more information about a type or member, the documentation file must be used in conjunction with reflection on the actual type or member.</span></span>
+<span data-ttu-id="39ed3-126">请注意，文档文件不提供有关类型和成员的完整信息，仅提供文档注释中包含的内容。</span><span class="sxs-lookup"><span data-stu-id="39ed3-126">Note that the documentation file does not provide full information about a type and members, only what is contained in the document comments.</span></span> <span data-ttu-id="39ed3-127">要获取有关类型或成员的详细信息，文档文件必须与对实际类型或成员的反射结合使用。</span><span class="sxs-lookup"><span data-stu-id="39ed3-127">To get more information about a type or member, the documentation file must be used in conjunction with reflection on the actual type or member.</span></span>
 
-## <a name="recommended-tags"></a><span data-ttu-id="bdd03-128">建议的标记</span><span class="sxs-lookup"><span data-stu-id="bdd03-128">Recommended tags</span></span>
+## <a name="recommended-tags"></a><span data-ttu-id="39ed3-128">建议的标记</span><span class="sxs-lookup"><span data-stu-id="39ed3-128">Recommended tags</span></span>
 
-<span data-ttu-id="bdd03-129">文档生成器必须接受并处理根据 XML 的规则是有效的任何标记。</span><span class="sxs-lookup"><span data-stu-id="bdd03-129">The documentation generator must accept and process any tag that is valid according to the rules of XML.</span></span> <span data-ttu-id="bdd03-130">下列标记提供用户文档中的常用功能：</span><span class="sxs-lookup"><span data-stu-id="bdd03-130">The following tags provide commonly used functionality in user documentation:</span></span>
+<span data-ttu-id="39ed3-129">文档生成器必须接受和处理根据 XML 规则有效的任何标记。</span><span class="sxs-lookup"><span data-stu-id="39ed3-129">The documentation generator must accept and process any tag that is valid according to the rules of XML.</span></span> <span data-ttu-id="39ed3-130">下列标记提供用户文档中的常用功能：</span><span class="sxs-lookup"><span data-stu-id="39ed3-130">The following tags provide commonly used functionality in user documentation:</span></span>
 
-<span data-ttu-id="bdd03-131">`<c>` 设置类似于代码的字体中的文本</span><span class="sxs-lookup"><span data-stu-id="bdd03-131">`<c>` Sets text in a code-like font</span></span>
+<span data-ttu-id="39ed3-131">`<c>`以类似代码的字体设置文本</span><span class="sxs-lookup"><span data-stu-id="39ed3-131">`<c>` Sets text in a code-like font</span></span>
 
-<span data-ttu-id="bdd03-132">`<code>` 类似于代码的字体中设置源的代码或程序输出的一个或多个的行</span><span class="sxs-lookup"><span data-stu-id="bdd03-132">`<code>` Sets one or more lines of source code or program output in a code-like font</span></span>
+<span data-ttu-id="39ed3-132">`<code>`以类似代码的字体设置一行或多行源代码或程序输出</span><span class="sxs-lookup"><span data-stu-id="39ed3-132">`<code>` Sets one or more lines of source code or program output in a code-like font</span></span>
 
-<span data-ttu-id="bdd03-133">`<example>` 指示一个示例</span><span class="sxs-lookup"><span data-stu-id="bdd03-133">`<example>` Indicates an example</span></span>
+<span data-ttu-id="39ed3-133">`<example>`指示示例</span><span class="sxs-lookup"><span data-stu-id="39ed3-133">`<example>` Indicates an example</span></span>
 
-<span data-ttu-id="bdd03-134">`<exception>` 标识一个方法可能会引发的异常</span><span class="sxs-lookup"><span data-stu-id="bdd03-134">`<exception>` Identifies the exceptions a method can throw</span></span>
+<span data-ttu-id="39ed3-134">`<exception>`标识方法可以引发的异常</span><span class="sxs-lookup"><span data-stu-id="39ed3-134">`<exception>` Identifies the exceptions a method can throw</span></span>
 
-<span data-ttu-id="bdd03-135">`<include>` 包括外部 XML 文档</span><span class="sxs-lookup"><span data-stu-id="bdd03-135">`<include>` Includes an external XML document</span></span>
+<span data-ttu-id="39ed3-135">`<include>`包括外部 XML 文档</span><span class="sxs-lookup"><span data-stu-id="39ed3-135">`<include>` Includes an external XML document</span></span>
 
-<span data-ttu-id="bdd03-136">`<list>` 创建列表或表</span><span class="sxs-lookup"><span data-stu-id="bdd03-136">`<list>` Creates a list or table</span></span>
+<span data-ttu-id="39ed3-136">`<list>`创建列表或表</span><span class="sxs-lookup"><span data-stu-id="39ed3-136">`<list>` Creates a list or table</span></span>
 
-<span data-ttu-id="bdd03-137">`<para>` 允许结构添加到文本</span><span class="sxs-lookup"><span data-stu-id="bdd03-137">`<para>` Permits structure to be added to text</span></span>
+<span data-ttu-id="39ed3-137">`<para>`允许将结构添加到文本中</span><span class="sxs-lookup"><span data-stu-id="39ed3-137">`<para>` Permits structure to be added to text</span></span>
 
-<span data-ttu-id="bdd03-138">`<param>` 描述的方法或构造函数的参数</span><span class="sxs-lookup"><span data-stu-id="bdd03-138">`<param>` Describes a parameter for a method or constructor</span></span>
+<span data-ttu-id="39ed3-138">`<param>`描述方法或构造函数的参数</span><span class="sxs-lookup"><span data-stu-id="39ed3-138">`<param>` Describes a parameter for a method or constructor</span></span>
 
-<span data-ttu-id="bdd03-139">`<paramref>` 标识一个字为参数名称</span><span class="sxs-lookup"><span data-stu-id="bdd03-139">`<paramref>` Identifies that a word is a parameter name</span></span>
+<span data-ttu-id="39ed3-139">`<paramref>`标识单词是参数名称</span><span class="sxs-lookup"><span data-stu-id="39ed3-139">`<paramref>` Identifies that a word is a parameter name</span></span>
 
-<span data-ttu-id="bdd03-140">`<permission>` 记录成员的安全可访问性</span><span class="sxs-lookup"><span data-stu-id="bdd03-140">`<permission>` Documents the security accessibility of a member</span></span>
+<span data-ttu-id="39ed3-140">`<permission>`记录成员的安全可访问性</span><span class="sxs-lookup"><span data-stu-id="39ed3-140">`<permission>` Documents the security accessibility of a member</span></span>
 
-<span data-ttu-id="bdd03-141">`<remarks>` 介绍一种类型</span><span class="sxs-lookup"><span data-stu-id="bdd03-141">`<remarks>` Describes a type</span></span>
+<span data-ttu-id="39ed3-141">`<remarks>`描述类型</span><span class="sxs-lookup"><span data-stu-id="39ed3-141">`<remarks>` Describes a type</span></span>
 
-<span data-ttu-id="bdd03-142">`<returns>` 描述一种方法的返回值</span><span class="sxs-lookup"><span data-stu-id="bdd03-142">`<returns>` Describes the return value of a method</span></span>
+<span data-ttu-id="39ed3-142">`<returns>`描述方法的返回值</span><span class="sxs-lookup"><span data-stu-id="39ed3-142">`<returns>` Describes the return value of a method</span></span>
 
-<span data-ttu-id="bdd03-143">`<see>` 指定的链接</span><span class="sxs-lookup"><span data-stu-id="bdd03-143">`<see>` Specifies a link</span></span>
+<span data-ttu-id="39ed3-143">`<see>`指定链接</span><span class="sxs-lookup"><span data-stu-id="39ed3-143">`<see>` Specifies a link</span></span>
 
-<span data-ttu-id="bdd03-144">`<seealso>` 生成的另请参阅条目</span><span class="sxs-lookup"><span data-stu-id="bdd03-144">`<seealso>` Generates a See Also entry</span></span>
+<span data-ttu-id="39ed3-144">`<seealso>`生成"另请参阅"条目</span><span class="sxs-lookup"><span data-stu-id="39ed3-144">`<seealso>` Generates a See Also entry</span></span>
 
-<span data-ttu-id="bdd03-145">`<summary>` 描述一种类型的成员</span><span class="sxs-lookup"><span data-stu-id="bdd03-145">`<summary>` Describes a member of a type</span></span>
+<span data-ttu-id="39ed3-145">`<summary>`描述类型的成员</span><span class="sxs-lookup"><span data-stu-id="39ed3-145">`<summary>` Describes a member of a type</span></span>
 
-<span data-ttu-id="bdd03-146">`<typeparam>` 描述类型参数</span><span class="sxs-lookup"><span data-stu-id="bdd03-146">`<typeparam>` Describes a type parameter</span></span>
+<span data-ttu-id="39ed3-146">`<typeparam>`描述类型参数</span><span class="sxs-lookup"><span data-stu-id="39ed3-146">`<typeparam>` Describes a type parameter</span></span>
 
-<span data-ttu-id="bdd03-147">`<value>` 描述的属性</span><span class="sxs-lookup"><span data-stu-id="bdd03-147">`<value>` Describes a property</span></span>
+<span data-ttu-id="39ed3-147">`<value>`描述属性</span><span class="sxs-lookup"><span data-stu-id="39ed3-147">`<value>` Describes a property</span></span>
 
-### <a name="ltcgt"></a><span data-ttu-id="bdd03-148">&lt;c&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-148">&lt;c&gt;</span></span>
+### <a name="ltcgt"></a><span data-ttu-id="39ed3-148">&lt;c&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-148">&lt;c&gt;</span></span>
 
-<span data-ttu-id="bdd03-149">此标记指定的片段说明中的文本应使用类似的代码块使用的字体。</span><span class="sxs-lookup"><span data-stu-id="bdd03-149">This tag specifies that a fragment of text within a description should use a font like that used for a block of code.</span></span> <span data-ttu-id="bdd03-150">(对于实际代码行，请使用`<code>`。)</span><span class="sxs-lookup"><span data-stu-id="bdd03-150">(For lines of actual code, use `<code>`.)</span></span>
+<span data-ttu-id="39ed3-149">此标记指定描述中的文本片段应使用类似于代码块的字体。</span><span class="sxs-lookup"><span data-stu-id="39ed3-149">This tag specifies that a fragment of text within a description should use a font like that used for a block of code.</span></span> <span data-ttu-id="39ed3-150">（对于实际代码行，请使用`<code>`.）</span><span class="sxs-lookup"><span data-stu-id="39ed3-150">(For lines of actual code, use `<code>`.)</span></span>
 
-<span data-ttu-id="bdd03-151">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-151">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-151">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-151">__Syntax:__</span></span>
 
 ```xml
 <c>text to be set like code</c>
 ```
 
-<span data-ttu-id="bdd03-152">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-152">__Example:__</span></span>
+<span data-ttu-id="39ed3-152">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-152">__Example:__</span></span>
 
 ```vb
 ''' <remarks>
@@ -99,17 +99,17 @@ Public Class Point
 End Class
 ```
 
-### <a name="ltcodegt"></a><span data-ttu-id="bdd03-153">&lt;代码&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-153">&lt;code&gt;</span></span>
+### <a name="ltcodegt"></a><span data-ttu-id="39ed3-153">&lt;code&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-153">&lt;code&gt;</span></span>
 
-<span data-ttu-id="bdd03-154">此标记指定一个或多个源的代码或程序输出行应使用固定宽度字体。</span><span class="sxs-lookup"><span data-stu-id="bdd03-154">This tag specifies that one or more lines of source code or program output should use a fixed-width font.</span></span> <span data-ttu-id="bdd03-155">(对于小型代码片段使用`<c>`。)</span><span class="sxs-lookup"><span data-stu-id="bdd03-155">(For small code fragments, use `<c>`.)</span></span>
+<span data-ttu-id="39ed3-154">此标记指定一行或多行源代码或程序输出应使用固定宽度字体。</span><span class="sxs-lookup"><span data-stu-id="39ed3-154">This tag specifies that one or more lines of source code or program output should use a fixed-width font.</span></span> <span data-ttu-id="39ed3-155">（对于小代码片段，请使用`<c>`.）</span><span class="sxs-lookup"><span data-stu-id="39ed3-155">(For small code fragments, use `<c>`.)</span></span>
 
-<span data-ttu-id="bdd03-156">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-156">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-156">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-156">__Syntax:__</span></span>
 
 ```xml
 <code>source code or program output</code>
 ```
 
-<span data-ttu-id="bdd03-157">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-157">__Example:__</span></span>
+<span data-ttu-id="39ed3-157">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-157">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -130,31 +130,31 @@ Public Sub Translate(x As Integer, y As Integer)
 End Sub
 ```
 
-### <a name="ltexamplegt"></a><span data-ttu-id="bdd03-158">&lt;example&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-158">&lt;example&gt;</span></span>
+### <a name="ltexamplegt"></a><span data-ttu-id="39ed3-158">&lt;example&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-158">&lt;example&gt;</span></span>
 
-<span data-ttu-id="bdd03-159">此标记允许的代码示例显示如何使用元素的注释内。</span><span class="sxs-lookup"><span data-stu-id="bdd03-159">This tag allows example code within a comment to show how an element can be used.</span></span> <span data-ttu-id="bdd03-160">通常，这将涉及到使用标记的`<code>`也。</span><span class="sxs-lookup"><span data-stu-id="bdd03-160">Ordinarily, this will involve use of the tag `<code>` as well.</span></span>
+<span data-ttu-id="39ed3-159">此标记允许注释中的示例代码显示如何使用元素。</span><span class="sxs-lookup"><span data-stu-id="39ed3-159">This tag allows example code within a comment to show how an element can be used.</span></span> <span data-ttu-id="39ed3-160">通常，这也将涉及使用标记`<code>`。</span><span class="sxs-lookup"><span data-stu-id="39ed3-160">Ordinarily, this will involve use of the tag `<code>` as well.</span></span>
 
-<span data-ttu-id="bdd03-161">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-161">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-161">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-161">__Syntax:__</span></span>
 
 ```xml
 <example>description</example>
 ```
 
-<span data-ttu-id="bdd03-162">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-162">__Example:__</span></span>
+<span data-ttu-id="39ed3-162">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-162">__Example:__</span></span>
 
-<span data-ttu-id="bdd03-163">有关示例，请参见 `<code>`。</span><span class="sxs-lookup"><span data-stu-id="bdd03-163">See `<code>` for an example.</span></span>
+<span data-ttu-id="39ed3-163">有关示例，请参见 `<code>`。</span><span class="sxs-lookup"><span data-stu-id="39ed3-163">See `<code>` for an example.</span></span>
 
-### <a name="ltexceptiongt"></a><span data-ttu-id="bdd03-164">&lt;exception&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-164">&lt;exception&gt;</span></span>
+### <a name="ltexceptiongt"></a><span data-ttu-id="39ed3-164">&lt;exception&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-164">&lt;exception&gt;</span></span>
 
-<span data-ttu-id="bdd03-165">此标记提供了一种方法来记录的方法可能引发的异常。</span><span class="sxs-lookup"><span data-stu-id="bdd03-165">This tag provides a way to document the exceptions a method can throw.</span></span>
+<span data-ttu-id="39ed3-165">此标记提供了一种记录方法可以引发异常的方法的方法的方法的方法的方法的方法的方法的方法。</span><span class="sxs-lookup"><span data-stu-id="39ed3-165">This tag provides a way to document the exceptions a method can throw.</span></span>
 
-<span data-ttu-id="bdd03-166">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-166">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-166">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-166">__Syntax:__</span></span>
 
 ```xml
 <exception cref="member">description</exception>
 ```
 
-<span data-ttu-id="bdd03-167">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-167">__Example:__</span></span>
+<span data-ttu-id="39ed3-167">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-167">__Example:__</span></span>
 
 ```vb
 Public Module DataBaseOperations
@@ -171,25 +171,25 @@ Public Module DataBaseOperations
 End Module
 ```
 
-### <a name="ltincludegt"></a><span data-ttu-id="bdd03-168">&lt;include&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-168">&lt;include&gt;</span></span>
+### <a name="ltincludegt"></a><span data-ttu-id="39ed3-168">&lt;include&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-168">&lt;include&gt;</span></span>
 
-<span data-ttu-id="bdd03-169">此标记用于包括来自外部格式正确的 XML 文档的信息。</span><span class="sxs-lookup"><span data-stu-id="bdd03-169">This tag is used to include information from an external well-formed XML document.</span></span> <span data-ttu-id="bdd03-170">XPath 表达式应用于要指定什么 XML 应包含从文档的 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="bdd03-170">An XPath expression is applied to the XML document to specify what XML should be included from the document.</span></span> <span data-ttu-id="bdd03-171">`<include>`标记然后替换从外部文档中选定的 XML。</span><span class="sxs-lookup"><span data-stu-id="bdd03-171">The `<include>` tag is then replaced with the selected XML from the external document.</span></span>
+<span data-ttu-id="39ed3-169">此标记用于包括来自外部格式良好的 XML 文档中的信息。</span><span class="sxs-lookup"><span data-stu-id="39ed3-169">This tag is used to include information from an external well-formed XML document.</span></span> <span data-ttu-id="39ed3-170">XPath 表达式应用于 XML 文档，以指定应从文档中包含哪些 XML。</span><span class="sxs-lookup"><span data-stu-id="39ed3-170">An XPath expression is applied to the XML document to specify what XML should be included from the document.</span></span> <span data-ttu-id="39ed3-171">然后`<include>`，将标记替换为外部文档中的选定 XML。</span><span class="sxs-lookup"><span data-stu-id="39ed3-171">The `<include>` tag is then replaced with the selected XML from the external document.</span></span>
 
-<span data-ttu-id="bdd03-172">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-172">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-172">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-172">__Syntax:__</span></span>
 
 ```xml
 <include file="filename" path="xpath">
 ```
 
-<span data-ttu-id="bdd03-173">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-173">__Example:__</span></span>
+<span data-ttu-id="39ed3-173">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-173">__Example:__</span></span>
 
-<span data-ttu-id="bdd03-174">如果源代码包含如下所示的声明：</span><span class="sxs-lookup"><span data-stu-id="bdd03-174">If the source code contained a declaration like the following:</span></span>
+<span data-ttu-id="39ed3-174">如果源代码包含如下声明：</span><span class="sxs-lookup"><span data-stu-id="39ed3-174">If the source code contained a declaration like the following:</span></span>
 
 ```vb
 ''' <include file="docs.xml" path="extra/class[@name="IntList"]/*" />
 ```
 
-<span data-ttu-id="bdd03-175">外部文件 docs.xml 感到以下内容，并且</span><span class="sxs-lookup"><span data-stu-id="bdd03-175">and the external file docs.xml had the following contents</span></span>
+<span data-ttu-id="39ed3-175">和外部文件 docs.xml 具有以下内容</span><span class="sxs-lookup"><span data-stu-id="39ed3-175">and the external file docs.xml had the following contents</span></span>
 
 ```xml
 <?xml version="1.0"?>
@@ -207,7 +207,7 @@ End Module
 </extra>
 ```
 
-<span data-ttu-id="bdd03-176">然后同一文档是输出，如同的源代码包含：</span><span class="sxs-lookup"><span data-stu-id="bdd03-176">then the same documentation is output as if the source code contained:</span></span>
+<span data-ttu-id="39ed3-176">然后输出相同的文档，就像源代码包含一样：</span><span class="sxs-lookup"><span data-stu-id="39ed3-176">then the same documentation is output as if the source code contained:</span></span>
 
 ```xml
 ''' <summary>
@@ -215,13 +215,13 @@ End Module
 ''' </summary>
 ```
 
-### <a name="ltlistgt"></a><span data-ttu-id="bdd03-177">&lt;list&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-177">&lt;list&gt;</span></span>
+### <a name="ltlistgt"></a><span data-ttu-id="39ed3-177">&lt;list&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-177">&lt;list&gt;</span></span>
 
-<span data-ttu-id="bdd03-178">此标记用于创建列表或项的表。</span><span class="sxs-lookup"><span data-stu-id="bdd03-178">This tag is used to create a list or table of items.</span></span> <span data-ttu-id="bdd03-179">它可能包含`<listheader>`块来定义表或定义列表的标题行。</span><span class="sxs-lookup"><span data-stu-id="bdd03-179">It may contain a `<listheader>` block to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="bdd03-180">（在定义表时，仅在标题中的术语的项需要提供。）</span><span class="sxs-lookup"><span data-stu-id="bdd03-180">(When defining a table, only an entry for term in the heading need be supplied.)</span></span>
+<span data-ttu-id="39ed3-178">此标记用于创建项目的列表或表。</span><span class="sxs-lookup"><span data-stu-id="39ed3-178">This tag is used to create a list or table of items.</span></span> <span data-ttu-id="39ed3-179">它可能包含一个`<listheader>`块来定义表或定义列表的标题行。</span><span class="sxs-lookup"><span data-stu-id="39ed3-179">It may contain a `<listheader>` block to define the heading row of either a table or definition list.</span></span> <span data-ttu-id="39ed3-180">（定义表时，只需要提供标题中术语的条目。</span><span class="sxs-lookup"><span data-stu-id="39ed3-180">(When defining a table, only an entry for term in the heading need be supplied.)</span></span>
 
-<span data-ttu-id="bdd03-181">使用指定列表中的每个项`<item>`块。</span><span class="sxs-lookup"><span data-stu-id="bdd03-181">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="bdd03-182">创建定义列表时，必须指定术语和说明。</span><span class="sxs-lookup"><span data-stu-id="bdd03-182">When creating a definition list, both term and description must be specified.</span></span> <span data-ttu-id="bdd03-183">但是，对于表、 项目符号列表或编号的列表，需指定仅说明。</span><span class="sxs-lookup"><span data-stu-id="bdd03-183">However, for a table, bulleted list, or numbered list, only description need be specified.</span></span>
+<span data-ttu-id="39ed3-181">列表中的每个项都使用`<item>`块指定。</span><span class="sxs-lookup"><span data-stu-id="39ed3-181">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="39ed3-182">创建定义列表时，必须指定术语和说明。</span><span class="sxs-lookup"><span data-stu-id="39ed3-182">When creating a definition list, both term and description must be specified.</span></span> <span data-ttu-id="39ed3-183">但是，对于表、项目符号列表或编号列表，只需指定描述。</span><span class="sxs-lookup"><span data-stu-id="39ed3-183">However, for a table, bulleted list, or numbered list, only description need be specified.</span></span>
 
-<span data-ttu-id="bdd03-184">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-184">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-184">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-184">__Syntax:__</span></span>
 
 ```xml
 <list type="bullet" | "number" | "table">
@@ -241,7 +241,7 @@ End Module
 </list>
 ```
 
-<span data-ttu-id="bdd03-185">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-185">__Example:__</span></span>
+<span data-ttu-id="39ed3-185">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-185">__Example:__</span></span>
 
 ```vb
 Public Class TestClass
@@ -261,17 +261,17 @@ Public Class TestClass
 End Class
 ```
 
-### <a name="ltparagt"></a><span data-ttu-id="bdd03-186">&lt;para&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-186">&lt;para&gt;</span></span>
+### <a name="ltparagt"></a><span data-ttu-id="39ed3-186">&lt;para&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-186">&lt;para&gt;</span></span>
 
-<span data-ttu-id="bdd03-187">此标记是用于其他标记内，例如`<remarks>`或`<returns>`，并允许结构添加到文本。</span><span class="sxs-lookup"><span data-stu-id="bdd03-187">This tag is for use inside other tags, such as `<remarks>` or `<returns>`, and permits structure to be added to text.</span></span>
+<span data-ttu-id="39ed3-187">此标记用于其他标记（如`<remarks>`或`<returns>`）内，并允许将结构添加到文本中。</span><span class="sxs-lookup"><span data-stu-id="39ed3-187">This tag is for use inside other tags, such as `<remarks>` or `<returns>`, and permits structure to be added to text.</span></span>
 
-<span data-ttu-id="bdd03-188">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-188">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-188">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-188">__Syntax:__</span></span>
 
 ```xml
 <para>content</para>
 ```
 
-<span data-ttu-id="bdd03-189">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-189">__Example:__</span></span>
+<span data-ttu-id="39ed3-189">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-189">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -284,17 +284,17 @@ Public Shared Sub Main()
 End Sub
 ```
 
-### <a name="ltparamgt"></a><span data-ttu-id="bdd03-190">&lt;param&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-190">&lt;param&gt;</span></span>
+### <a name="ltparamgt"></a><span data-ttu-id="39ed3-190">&lt;param&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-190">&lt;param&gt;</span></span>
 
-<span data-ttu-id="bdd03-191">此标记描述方法、 构造函数或索引的属性的参数。</span><span class="sxs-lookup"><span data-stu-id="bdd03-191">This tag describes a parameter for a method, constructor, or indexed property.</span></span>
+<span data-ttu-id="39ed3-191">此标记描述方法、构造函数或索引属性的参数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-191">This tag describes a parameter for a method, constructor, or indexed property.</span></span>
 
-<span data-ttu-id="bdd03-192">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-192">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-192">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-192">__Syntax:__</span></span>
 
 ```xml
 <param name="name">description</param>
 ```
 
-<span data-ttu-id="bdd03-193">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-193">__Example:__</span></span>
+<span data-ttu-id="39ed3-193">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-193">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -309,17 +309,17 @@ Public Sub Move(x As Integer, y As Integer)
 End Sub
 ```
 
-### <a name="ltparamrefgt"></a><span data-ttu-id="bdd03-194">&lt;paramref&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-194">&lt;paramref&gt;</span></span>
+### <a name="ltparamrefgt"></a><span data-ttu-id="39ed3-194">&lt;paramref&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-194">&lt;paramref&gt;</span></span>
 
-<span data-ttu-id="bdd03-195">此标记指示单词为参数。</span><span class="sxs-lookup"><span data-stu-id="bdd03-195">This tag indicates that a word is a parameter.</span></span> <span data-ttu-id="bdd03-196">可以处理文档文件以设置此参数的格式以不同的方式。</span><span class="sxs-lookup"><span data-stu-id="bdd03-196">The documentation file can be processed to format this parameter in some distinct way.</span></span>
+<span data-ttu-id="39ed3-195">此标记指示单词是参数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-195">This tag indicates that a word is a parameter.</span></span> <span data-ttu-id="39ed3-196">可以处理文档文件，以某种不同的方式格式化此参数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-196">The documentation file can be processed to format this parameter in some distinct way.</span></span>
 
-<span data-ttu-id="bdd03-197">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-197">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-197">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-197">__Syntax:__</span></span>
 
 ```xml
 <paramref name="name"/>
 ```
 
-<span data-ttu-id="bdd03-198">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-198">__Example:__</span></span>
+<span data-ttu-id="39ed3-198">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-198">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -334,17 +334,17 @@ Public Sub New(x As Integer, y As Integer)
 End Sub
 ```
 
-### <a name="ltpermissiongt"></a><span data-ttu-id="bdd03-199">&lt;permission&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-199">&lt;permission&gt;</span></span>
+### <a name="ltpermissiongt"></a><span data-ttu-id="39ed3-199">permission&lt;&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-199">&lt;permission&gt;</span></span>
 
-<span data-ttu-id="bdd03-200">此标记记录成员的安全可访问性</span><span class="sxs-lookup"><span data-stu-id="bdd03-200">This tag documents the security accessibility of a member</span></span>
+<span data-ttu-id="39ed3-200">此标记记录成员的安全可访问性</span><span class="sxs-lookup"><span data-stu-id="39ed3-200">This tag documents the security accessibility of a member</span></span>
 
-<span data-ttu-id="bdd03-201">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-201">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-201">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-201">__Syntax:__</span></span>
 
 ```xml
 <permission cref="member">description</permission>
 ```
 
-<span data-ttu-id="bdd03-202">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-202">__Example:__</span></span>
+<span data-ttu-id="39ed3-202">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-202">__Example:__</span></span>
 
 ```vb
 ''' <permission cref="System.Security.PermissionSet">Everyone can
@@ -353,17 +353,17 @@ Public Shared Sub Test()
 End Sub
 ```
 
-### <a name="ltremarksgt"></a><span data-ttu-id="bdd03-203">&lt;remarks&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-203">&lt;remarks&gt;</span></span>
+### <a name="ltremarksgt"></a><span data-ttu-id="39ed3-203">&lt;remarks&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-203">&lt;remarks&gt;</span></span>
 
-<span data-ttu-id="bdd03-204">此标记指定一种类型的概述信息。</span><span class="sxs-lookup"><span data-stu-id="bdd03-204">This tag specifies overview information about a type.</span></span> <span data-ttu-id="bdd03-205">(使用`<summary>`来描述类型的成员。)</span><span class="sxs-lookup"><span data-stu-id="bdd03-205">(Use `<summary>` to describe the members of a type.)</span></span>
+<span data-ttu-id="39ed3-204">此标记指定有关类型的概述信息。</span><span class="sxs-lookup"><span data-stu-id="39ed3-204">This tag specifies overview information about a type.</span></span> <span data-ttu-id="39ed3-205">（用于`<summary>`描述类型的成员。</span><span class="sxs-lookup"><span data-stu-id="39ed3-205">(Use `<summary>` to describe the members of a type.)</span></span>
 
-<span data-ttu-id="bdd03-206">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-206">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-206">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-206">__Syntax:__</span></span>
 
 ```xml
 <remarks>description</remarks>
 ```
 
-<span data-ttu-id="bdd03-207">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-207">__Example:__</span></span>
+<span data-ttu-id="39ed3-207">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-207">__Example:__</span></span>
 
 ```vb
 ''' <remarks>
@@ -373,17 +373,17 @@ Public Class Point
 End Class
 ```
 
-### <a name="ltreturnsgt"></a><span data-ttu-id="bdd03-208">&lt;returns&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-208">&lt;returns&gt;</span></span>
+### <a name="ltreturnsgt"></a><span data-ttu-id="39ed3-208">&lt;returns&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-208">&lt;returns&gt;</span></span>
 
-<span data-ttu-id="bdd03-209">此标记描述方法的返回值。</span><span class="sxs-lookup"><span data-stu-id="bdd03-209">This tag describes the return value of a method.</span></span>
+<span data-ttu-id="39ed3-209">此标记描述方法的返回值。</span><span class="sxs-lookup"><span data-stu-id="39ed3-209">This tag describes the return value of a method.</span></span>
 
-<span data-ttu-id="bdd03-210">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-210">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-210">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-210">__Syntax:__</span></span>
 
 ```xml
 <returns>description</returns>
 ```
 
-<span data-ttu-id="bdd03-211">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-211">__Example:__</span></span>
+<span data-ttu-id="39ed3-211">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-211">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -398,17 +398,17 @@ Public Overrides Function ToString() As String
 End Sub
 ```
 
-### <a name="ltseegt"></a><span data-ttu-id="bdd03-212">&lt;see&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-212">&lt;see&gt;</span></span>
+### <a name="ltseegt"></a><span data-ttu-id="39ed3-212">&lt;see&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-212">&lt;see&gt;</span></span>
 
-<span data-ttu-id="bdd03-213">此标记允许用于在文本内指定的链接。</span><span class="sxs-lookup"><span data-stu-id="bdd03-213">This tag allows a link to be specified within text.</span></span> <span data-ttu-id="bdd03-214">(使用`<seealso>`以指示要在另请参见部分中显示的文本。)</span><span class="sxs-lookup"><span data-stu-id="bdd03-214">(Use `<seealso>` to indicate text that is to appear in a See Also section.)</span></span>
+<span data-ttu-id="39ed3-213">此标记允许在文本中指定链接。</span><span class="sxs-lookup"><span data-stu-id="39ed3-213">This tag allows a link to be specified within text.</span></span> <span data-ttu-id="39ed3-214">（用于`<seealso>`指示要显示在"另请参阅"部分的文本。</span><span class="sxs-lookup"><span data-stu-id="39ed3-214">(Use `<seealso>` to indicate text that is to appear in a See Also section.)</span></span>
 
-<span data-ttu-id="bdd03-215">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-215">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-215">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-215">__Syntax:__</span></span>
 
 ```xml
 <see cref="member"/>
 ```
 
-<span data-ttu-id="bdd03-216">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-216">__Example:__</span></span>
+<span data-ttu-id="39ed3-216">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-216">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -432,17 +432,17 @@ Public Sub Translate(x As Integer, y As Integer)
 End Sub
 ```
 
-### <a name="ltseealsogt"></a><span data-ttu-id="bdd03-217">&lt;seealso&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-217">&lt;seealso&gt;</span></span>
+### <a name="ltseealsogt"></a><span data-ttu-id="39ed3-217">&lt;seealso&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-217">&lt;seealso&gt;</span></span>
 
-<span data-ttu-id="bdd03-218">此标记生成的项的另请参见部分。</span><span class="sxs-lookup"><span data-stu-id="bdd03-218">This tag generates an entry for the See Also section.</span></span> <span data-ttu-id="bdd03-219">(使用`<see>`指定从文本中的链接。)</span><span class="sxs-lookup"><span data-stu-id="bdd03-219">(Use `<see>` to specify a link from within text.)</span></span>
+<span data-ttu-id="39ed3-218">此标记为"另请参阅"部分生成条目。</span><span class="sxs-lookup"><span data-stu-id="39ed3-218">This tag generates an entry for the See Also section.</span></span> <span data-ttu-id="39ed3-219">（用于`<see>`从文本中指定链接。</span><span class="sxs-lookup"><span data-stu-id="39ed3-219">(Use `<see>` to specify a link from within text.)</span></span>
 
-<span data-ttu-id="bdd03-220">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-220">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-220">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-220">__Syntax:__</span></span>
 
 ```xml
 <seealso cref="member"/>
 ```
 
-<span data-ttu-id="bdd03-221">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-221">__Example:__</span></span>
+<span data-ttu-id="39ed3-221">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-221">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -455,17 +455,17 @@ Public Overrides Function Equals(o As Object) As Boolean
 End Function
 ```
 
-### <a name="ltsummarygt"></a><span data-ttu-id="bdd03-222">&lt;summary&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-222">&lt;summary&gt;</span></span>
+### <a name="ltsummarygt"></a><span data-ttu-id="39ed3-222">&lt;summary&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-222">&lt;summary&gt;</span></span>
 
-<span data-ttu-id="bdd03-223">此标记描述一个类型成员。</span><span class="sxs-lookup"><span data-stu-id="bdd03-223">This tag describes a type member.</span></span> <span data-ttu-id="bdd03-224">(使用`<remarks>`描述类型本身。)</span><span class="sxs-lookup"><span data-stu-id="bdd03-224">(Use `<remarks>` to describe a type itself.)</span></span>
+<span data-ttu-id="39ed3-223">此标记描述类型成员。</span><span class="sxs-lookup"><span data-stu-id="39ed3-223">This tag describes a type member.</span></span> <span data-ttu-id="39ed3-224">（用于`<remarks>`描述类型本身。</span><span class="sxs-lookup"><span data-stu-id="39ed3-224">(Use `<remarks>` to describe a type itself.)</span></span>
 
-<span data-ttu-id="bdd03-225">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-225">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-225">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-225">__Syntax:__</span></span>
 
 ```xml
 <summary>description</summary>
 ```
 
-<span data-ttu-id="bdd03-226">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-226">__Example:__</span></span>
+<span data-ttu-id="39ed3-226">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-226">__Example:__</span></span>
 
 ```vb
 ''' <summary>
@@ -476,17 +476,17 @@ Public Sub New()
 End Sub
 ```
 
-### <a name="lttypeparamgt"></a><span data-ttu-id="bdd03-227">&lt;typeparam&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-227">&lt;typeparam&gt;</span></span>
+### <a name="lttypeparamgt"></a><span data-ttu-id="39ed3-227">&lt;typeparam&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-227">&lt;typeparam&gt;</span></span>
 
-<span data-ttu-id="bdd03-228">此标记描述类型参数。</span><span class="sxs-lookup"><span data-stu-id="bdd03-228">This tag describes a type parameter.</span></span>
+<span data-ttu-id="39ed3-228">此标记描述类型参数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-228">This tag describes a type parameter.</span></span>
 
-<span data-ttu-id="bdd03-229">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-229">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-229">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-229">__Syntax:__</span></span>
 
 ```xml
 <typeparam name="name">description</typeparam>
 ```
 
-<span data-ttu-id="bdd03-230">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-230">__Example:__</span></span>
+<span data-ttu-id="39ed3-230">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-230">__Example:__</span></span>
 
 ```vb
 ''' <typeparam name="T">
@@ -496,17 +496,17 @@ Public Class ItemManager(Of T As IComparable)
 End Class
 ```
 
-### <a name="ltvaluegt"></a><span data-ttu-id="bdd03-231">&lt;值&gt;</span><span class="sxs-lookup"><span data-stu-id="bdd03-231">&lt;value&gt;</span></span>
+### <a name="ltvaluegt"></a><span data-ttu-id="39ed3-231">&lt;value&gt;</span><span class="sxs-lookup"><span data-stu-id="39ed3-231">&lt;value&gt;</span></span>
 
-<span data-ttu-id="bdd03-232">此标记描述的属性。</span><span class="sxs-lookup"><span data-stu-id="bdd03-232">This tag describes a property.</span></span>
+<span data-ttu-id="39ed3-232">此标记描述属性。</span><span class="sxs-lookup"><span data-stu-id="39ed3-232">This tag describes a property.</span></span>
 
-<span data-ttu-id="bdd03-233">__语法：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-233">__Syntax:__</span></span>
+<span data-ttu-id="39ed3-233">__语法：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-233">__Syntax:__</span></span>
 
 ```xml
 <value>property description</value>
 ```
 
-<span data-ttu-id="bdd03-234">__示例：__</span><span class="sxs-lookup"><span data-stu-id="bdd03-234">__Example:__</span></span>
+<span data-ttu-id="39ed3-234">__示例：__</span><span class="sxs-lookup"><span data-stu-id="39ed3-234">__Example:__</span></span>
 
 ```vb
 ''' <value>
@@ -522,25 +522,25 @@ Public Property X() As Integer
 End Property
 ```
 
-## <a name="id-strings"></a><span data-ttu-id="bdd03-235">ID 字符串</span><span class="sxs-lookup"><span data-stu-id="bdd03-235">ID Strings</span></span>
+## <a name="id-strings"></a><span data-ttu-id="39ed3-235">ID 字符串</span><span class="sxs-lookup"><span data-stu-id="39ed3-235">ID Strings</span></span>
 
-<span data-ttu-id="bdd03-236">在生成文档文件时，编译器将生成的标记为唯一标识它的文档注释的源代码中每个元素的 ID 字符串。</span><span class="sxs-lookup"><span data-stu-id="bdd03-236">When generating the documentation file, the compiler generates an ID string for each element in the source code that is tagged with a documentation comment that uniquely identifies it.</span></span> <span data-ttu-id="bdd03-237">此 ID 字符串可以由外部工具，用于标识中编译的程序集的哪个元素对应的文档注释。</span><span class="sxs-lookup"><span data-stu-id="bdd03-237">This ID string can be used by external tools to identify which element in a compiled assembly corresponds to the document comment.</span></span>
+<span data-ttu-id="39ed3-236">生成文档文件时，编译器会为源代码中的每个元素生成一个 ID 字符串，该元素使用唯一标识它的文档注释进行标记。</span><span class="sxs-lookup"><span data-stu-id="39ed3-236">When generating the documentation file, the compiler generates an ID string for each element in the source code that is tagged with a documentation comment that uniquely identifies it.</span></span> <span data-ttu-id="39ed3-237">外部工具可以使用此 ID 字符串来标识编译程序集中的哪个元素对应于文档注释。</span><span class="sxs-lookup"><span data-stu-id="39ed3-237">This ID string can be used by external tools to identify which element in a compiled assembly corresponds to the document comment.</span></span>
 
-<span data-ttu-id="bdd03-238">按如下所示生成 ID 字符串：</span><span class="sxs-lookup"><span data-stu-id="bdd03-238">ID strings are generated as follows:</span></span>
+<span data-ttu-id="39ed3-238">生成 ID 字符串如下所示：</span><span class="sxs-lookup"><span data-stu-id="39ed3-238">ID strings are generated as follows:</span></span>
 
-<span data-ttu-id="bdd03-239">字符串不得包含空格。</span><span class="sxs-lookup"><span data-stu-id="bdd03-239">No white space is placed in the string.</span></span>
+<span data-ttu-id="39ed3-239">字符串不得包含空格。</span><span class="sxs-lookup"><span data-stu-id="39ed3-239">No white space is placed in the string.</span></span>
 
-<span data-ttu-id="bdd03-240">字符串的第一部分标识成员记录，通过单个跟一个冒号字符的类型。</span><span class="sxs-lookup"><span data-stu-id="bdd03-240">The first part of the string identifies the kind of member being documented, via a single character followed by a colon.</span></span> <span data-ttu-id="bdd03-241">定义了以下类型的成员，则在它后面的括号中的相应字符： 事件 (E) 字段 (F)，包括构造函数和运算符 (M)、 命名空间 (N)、 属性 (P) 和 (T) 类型的方法。</span><span class="sxs-lookup"><span data-stu-id="bdd03-241">The following kinds of members are defined, with the corresponding character in parenthesis after it: events (E), fields (F), methods including constructors and operators (M), namespaces (N), properties (P) and types (T).</span></span> <span data-ttu-id="bdd03-242">感叹号 （！） 指示字符串的其余部分提供了有关错误的信息和生成 ID 字符串时出错。</span><span class="sxs-lookup"><span data-stu-id="bdd03-242">An exclamation point (!) indicates an error occurred while generating the ID string, and the rest of the string provides information about the error.</span></span>
+<span data-ttu-id="39ed3-240">字符串的第一部分通过单个字符后跟冒号标识要记录的成员类型。</span><span class="sxs-lookup"><span data-stu-id="39ed3-240">The first part of the string identifies the kind of member being documented, via a single character followed by a colon.</span></span> <span data-ttu-id="39ed3-241">定义了以下类型的成员，括号中的相应字符：事件 （E）、字段 （F）、方法（包括构造函数和运算符 （M）、命名空间 （N）、属性 （P） 和类型 （T）。</span><span class="sxs-lookup"><span data-stu-id="39ed3-241">The following kinds of members are defined, with the corresponding character in parenthesis after it: events (E), fields (F), methods including constructors and operators (M), namespaces (N), properties (P) and types (T).</span></span> <span data-ttu-id="39ed3-242">感叹号 （！） 表示生成 ID 字符串时发生错误，字符串的其余部分提供有关错误的信息。</span><span class="sxs-lookup"><span data-stu-id="39ed3-242">An exclamation point (!) indicates an error occurred while generating the ID string, and the rest of the string provides information about the error.</span></span>
 
-<span data-ttu-id="bdd03-243">字符串的第二部分是开始全局命名空间的元素的完全限定的名称。</span><span class="sxs-lookup"><span data-stu-id="bdd03-243">The second part of the string is the fully qualified name of the element, starting at the global namespace.</span></span> <span data-ttu-id="bdd03-244">用句点分隔的元素，其包含的类型和命名空间名称。</span><span class="sxs-lookup"><span data-stu-id="bdd03-244">The name of the element, its enclosing type(s), and namespace are separated by periods.</span></span> <span data-ttu-id="bdd03-245">如果项本身的名称包含句点，它们替换为井号 （#）。</span><span class="sxs-lookup"><span data-stu-id="bdd03-245">If the name of the item itself has periods, they are replaced by the pound sign (#).</span></span> <span data-ttu-id="bdd03-246">（假定没有任何元素的名称中包含此字符。）具有类型参数的类型的名称结尾反引号 （'） 后跟一个数字，表示类型的类型参数的数目。</span><span class="sxs-lookup"><span data-stu-id="bdd03-246">(It is assumed that no element has this character in its name.) The name of a type with type parameters ends with a backquote (\`) followed by a number that represents the number of type parameters on the type.</span></span> <span data-ttu-id="bdd03-247">务必要记住的因为嵌套的类型有权访问包含这些类型的类型参数、 嵌套的类型隐式包含其包含类型的类型参数和这些类型以在其类型参数总计的计数用例。</span><span class="sxs-lookup"><span data-stu-id="bdd03-247">It is important to remember that because nested types have access to the type parameters of the types containing them, nested types implicitly contain the type parameters of their containing types, and those types are counted in their type parameter totals in this case.</span></span>
+<span data-ttu-id="39ed3-243">字符串的第二部分是元素的完全限定名称，从全局命名空间开始。</span><span class="sxs-lookup"><span data-stu-id="39ed3-243">The second part of the string is the fully qualified name of the element, starting at the global namespace.</span></span> <span data-ttu-id="39ed3-244">元素的名称、其封闭类型和命名空间由句点分隔。</span><span class="sxs-lookup"><span data-stu-id="39ed3-244">The name of the element, its enclosing type(s), and namespace are separated by periods.</span></span> <span data-ttu-id="39ed3-245">如果项目本身的名称具有句点，则它们将被磅符号 （#） 替换。</span><span class="sxs-lookup"><span data-stu-id="39ed3-245">If the name of the item itself has periods, they are replaced by the pound sign (#).</span></span> <span data-ttu-id="39ed3-246">（假定没有元素的名称中具有此字符。具有类型参数的类型的名称以回引 （'） 结尾，后跟一个数字表示类型上的类型参数数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-246">(It is assumed that no element has this character in its name.) The name of a type with type parameters ends with a backquote (\`) followed by a number that represents the number of type parameters on the type.</span></span> <span data-ttu-id="39ed3-247">请务必记住，由于嵌套类型有权访问包含它们的类型的类型参数，因此嵌套类型隐式包含其包含类型的类型参数，在这种情况下，这些类型将计入其类型参数总计中。</span><span class="sxs-lookup"><span data-stu-id="39ed3-247">It is important to remember that because nested types have access to the type parameters of the types containing them, nested types implicitly contain the type parameters of their containing types, and those types are counted in their type parameter totals in this case.</span></span>
 
-<span data-ttu-id="bdd03-248">对于方法和属性使用的参数，参数列表如下所示，括在括号中。</span><span class="sxs-lookup"><span data-stu-id="bdd03-248">For methods and properties with arguments, the argument list follows, enclosed in parentheses.</span></span> <span data-ttu-id="bdd03-249">对于不带参数，则省略括号。</span><span class="sxs-lookup"><span data-stu-id="bdd03-249">For those without arguments, the parentheses are omitted.</span></span> <span data-ttu-id="bdd03-250">确保自变量之间用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="bdd03-250">The arguments are separated by commas.</span></span> <span data-ttu-id="bdd03-251">每个自变量的编码相同的 CLI 签名，如下所示：参数由其完全限定名称表示。</span><span class="sxs-lookup"><span data-stu-id="bdd03-251">The encoding of each argument is the same as a CLI signature, as follows: Arguments are represented by their fully qualified name.</span></span> <span data-ttu-id="bdd03-252">例如，`Integer`变得`System.Int32`，`String`变得`System.String`，`Object`变得`System.Object`，依次类推。</span><span class="sxs-lookup"><span data-stu-id="bdd03-252">For example, `Integer` becomes `System.Int32`, `String` becomes `System.String`, `Object` becomes `System.Object`, and so on.</span></span> <span data-ttu-id="bdd03-253">自变量具有`ByRef`修饰符有 @ 按照其类型名称。</span><span class="sxs-lookup"><span data-stu-id="bdd03-253">Arguments having the `ByRef` modifier have a '@' following their type name.</span></span> <span data-ttu-id="bdd03-254">参数具有`ByVal`，`Optional`或`ParamArray`修饰符有没有特殊表示法。</span><span class="sxs-lookup"><span data-stu-id="bdd03-254">Arguments having the `ByVal`, `Optional` or `ParamArray` modifier have no special notation.</span></span> <span data-ttu-id="bdd03-255">参数是数组表示为`[lowerbound:size, ..., lowerbound:size]`其中逗号的数量是秩-1，和的下限和大小的每个维度，以十进制表示如果已知。</span><span class="sxs-lookup"><span data-stu-id="bdd03-255">Arguments that are arrays are represented as `[lowerbound:size, ..., lowerbound:size]` where the number of commas is the rank - 1, and the lower bounds and size of each dimension, if known, are represented in decimal.</span></span> <span data-ttu-id="bdd03-256">如果未指定下限或大小，则省略它。</span><span class="sxs-lookup"><span data-stu-id="bdd03-256">If a lower bound or size is not specified, it is omitted.</span></span> <span data-ttu-id="bdd03-257">如果省略某个特定维度的下限和大小，也会省略“:”。</span><span class="sxs-lookup"><span data-stu-id="bdd03-257">If the lower bound and size for a particular dimension are omitted, the ':' is omitted as well.</span></span> <span data-ttu-id="bdd03-258">一个表示数组的数组"`[]`"每个级别。</span><span class="sxs-lookup"><span data-stu-id="bdd03-258">Arrays of arrays are represented by one "`[]`" per level.</span></span>
+<span data-ttu-id="39ed3-248">对于具有参数的方法和属性，参数列表如下，包含在括号中。</span><span class="sxs-lookup"><span data-stu-id="39ed3-248">For methods and properties with arguments, the argument list follows, enclosed in parentheses.</span></span> <span data-ttu-id="39ed3-249">对于没有参数的参数，省略括号。</span><span class="sxs-lookup"><span data-stu-id="39ed3-249">For those without arguments, the parentheses are omitted.</span></span> <span data-ttu-id="39ed3-250">确保自变量之间用逗号分隔。</span><span class="sxs-lookup"><span data-stu-id="39ed3-250">The arguments are separated by commas.</span></span> <span data-ttu-id="39ed3-251">每个参数的编码与 CLI 签名相同，如下所示：参数由其完全限定的名称表示。</span><span class="sxs-lookup"><span data-stu-id="39ed3-251">The encoding of each argument is the same as a CLI signature, as follows: Arguments are represented by their fully qualified name.</span></span> <span data-ttu-id="39ed3-252">例如，`Integer`变为`System.Int32` `String` `System.String`，变为`Object`，`System.Object`等等。</span><span class="sxs-lookup"><span data-stu-id="39ed3-252">For example, `Integer` becomes `System.Int32`, `String` becomes `System.String`, `Object` becomes `System.Object`, and so on.</span></span> <span data-ttu-id="39ed3-253">具有修饰符的`ByRef`参数的类型名称后有一个"\*"。</span><span class="sxs-lookup"><span data-stu-id="39ed3-253">Arguments having the `ByRef` modifier have a '@' following their type name.</span></span> <span data-ttu-id="39ed3-254">具有 的`ByVal``Optional``ParamArray`参数 没有 特殊的表示法。</span><span class="sxs-lookup"><span data-stu-id="39ed3-254">Arguments having the `ByVal`, `Optional` or `ParamArray` modifier have no special notation.</span></span> <span data-ttu-id="39ed3-255">数组的参数表示为`[lowerbound:size, ..., lowerbound:size]`逗号数为排名 - 1，每个维度的下界和大小（如果已知）以小数表示。</span><span class="sxs-lookup"><span data-stu-id="39ed3-255">Arguments that are arrays are represented as `[lowerbound:size, ..., lowerbound:size]` where the number of commas is the rank - 1, and the lower bounds and size of each dimension, if known, are represented in decimal.</span></span> <span data-ttu-id="39ed3-256">如果未指定下限或大小，则省略它。</span><span class="sxs-lookup"><span data-stu-id="39ed3-256">If a lower bound or size is not specified, it is omitted.</span></span> <span data-ttu-id="39ed3-257">如果省略某个特定维度的下限和大小，也会省略“:”。</span><span class="sxs-lookup"><span data-stu-id="39ed3-257">If the lower bound and size for a particular dimension are omitted, the ':' is omitted as well.</span></span> <span data-ttu-id="39ed3-258">数组数组由每级别一个""`[]`表示。</span><span class="sxs-lookup"><span data-stu-id="39ed3-258">Arrays of arrays are represented by one "`[]`" per level.</span></span>
 
-### <a name="id-string-examples"></a><span data-ttu-id="bdd03-259">ID 字符串示例</span><span class="sxs-lookup"><span data-stu-id="bdd03-259">ID string examples</span></span>
+### <a name="id-string-examples"></a><span data-ttu-id="39ed3-259">ID 字符串示例</span><span class="sxs-lookup"><span data-stu-id="39ed3-259">ID string examples</span></span>
 
-<span data-ttu-id="bdd03-260">下面的示例分别演示 VB 代码，以及从支持的文档注释每个源元素生成的 ID 字符串的片段：</span><span class="sxs-lookup"><span data-stu-id="bdd03-260">The following examples each show a fragment of VB code, along with the ID string produced from each source element capable of having a documentation comment:</span></span>
+<span data-ttu-id="39ed3-260">以下每个示例都显示了 VB 代码的片段，以及从每个源元素生成的 ID 字符串，这些元素能够具有文档注释：</span><span class="sxs-lookup"><span data-stu-id="39ed3-260">The following examples each show a fragment of VB code, along with the ID string produced from each source element capable of having a documentation comment:</span></span>
 
-<span data-ttu-id="bdd03-261">类型表示使用其完全限定的名称。</span><span class="sxs-lookup"><span data-stu-id="bdd03-261">Types are represented using their fully qualified name.</span></span>
+<span data-ttu-id="39ed3-261">类型使用其完全限定的名称表示。</span><span class="sxs-lookup"><span data-stu-id="39ed3-261">Types are represented using their fully qualified name.</span></span>
 
 ```vb
 Enum Color
@@ -585,7 +585,7 @@ End Namespace
 "T:Acme.Widget.Direction"
 ```
 
-<span data-ttu-id="bdd03-262">字段由其完全限定名称表示。</span><span class="sxs-lookup"><span data-stu-id="bdd03-262">Fields are represented by their fully qualified name.</span></span>
+<span data-ttu-id="39ed3-262">字段由其完全限定的名称表示。</span><span class="sxs-lookup"><span data-stu-id="39ed3-262">Fields are represented by their fully qualified name.</span></span>
 
 ```vb
 Namespace Acme
@@ -617,7 +617,7 @@ End Namespace
 "F:Acme.Widget.array2"
 ```
 
-<span data-ttu-id="bdd03-263">构造函数。</span><span class="sxs-lookup"><span data-stu-id="bdd03-263">Constructors.</span></span>
+<span data-ttu-id="39ed3-263">构造函数。</span><span class="sxs-lookup"><span data-stu-id="39ed3-263">Constructors.</span></span>
 
 ```vb
 Namespace Acme
@@ -638,7 +638,7 @@ End Namespace
 "M:Acme.Widget.#ctor(System.String)"
 ```
 
-<span data-ttu-id="bdd03-264">方法。</span><span class="sxs-lookup"><span data-stu-id="bdd03-264">Methods.</span></span>
+<span data-ttu-id="39ed3-264">方法。</span><span class="sxs-lookup"><span data-stu-id="39ed3-264">Methods.</span></span>
 
 ```vb
 Namespace Acme
@@ -684,7 +684,7 @@ End Namespace
 "M:Acme.Widget.M5(System.Object[])"
 ```
 
-<span data-ttu-id="bdd03-265">属性。</span><span class="sxs-lookup"><span data-stu-id="bdd03-265">Properties.</span></span>
+<span data-ttu-id="39ed3-265">属性。</span><span class="sxs-lookup"><span data-stu-id="39ed3-265">Properties.</span></span>
 
 ```vb
 Namespace Acme
@@ -718,7 +718,7 @@ End Namespace
 "P:Acme.Widget.Item(System.String,System.Int32)"
 ```
 
-<span data-ttu-id="bdd03-266">事件</span><span class="sxs-lookup"><span data-stu-id="bdd03-266">Events</span></span>   
+<span data-ttu-id="39ed3-266">事件</span><span class="sxs-lookup"><span data-stu-id="39ed3-266">Events</span></span>   
 
 ```vb
 Namespace Acme
@@ -732,7 +732,7 @@ End Namespace
 "E:Acme.Widget.AnotherEvent"
 ```
 
-<span data-ttu-id="bdd03-267">运算符。</span><span class="sxs-lookup"><span data-stu-id="bdd03-267">Operators.</span></span>
+<span data-ttu-id="39ed3-267">运营商。</span><span class="sxs-lookup"><span data-stu-id="39ed3-267">Operators.</span></span>
 
 ```vb
 Namespace Acme
@@ -749,7 +749,7 @@ End Namespace
 "M:Acme.Widget.op_Addition(Acme.Widget,Acme.Widget)"
 ```
 
-<span data-ttu-id="bdd03-268">转换运算符具有一个尾随`~`跟的返回类型。</span><span class="sxs-lookup"><span data-stu-id="bdd03-268">Conversion operators have a trailing `~` followed by the return type.</span></span>
+<span data-ttu-id="39ed3-268">转换运算符具有尾随`~`，后跟返回类型。</span><span class="sxs-lookup"><span data-stu-id="39ed3-268">Conversion operators have a trailing `~` followed by the return type.</span></span>
 
 ```vb
 Namespace Acme
@@ -767,9 +767,9 @@ End Namespace
 "M:Acme.Widget.op_Implicit(Acme.Widget)~System.Int64"
 ```
 
-## <a name="documentation-comments-example"></a><span data-ttu-id="bdd03-269">文档注释示例</span><span class="sxs-lookup"><span data-stu-id="bdd03-269">Documentation comments example</span></span>
+## <a name="documentation-comments-example"></a><span data-ttu-id="39ed3-269">文档注释示例</span><span class="sxs-lookup"><span data-stu-id="39ed3-269">Documentation comments example</span></span>
 
-<span data-ttu-id="bdd03-270">下面的示例显示了源代码`Point`类：</span><span class="sxs-lookup"><span data-stu-id="bdd03-270">The following example shows the source code of a `Point` class:</span></span>
+<span data-ttu-id="39ed3-270">下面的示例显示了`Point`类的源代码：</span><span class="sxs-lookup"><span data-stu-id="39ed3-270">The following example shows the source code of a `Point` class:</span></span>
 
 ```vb
 Namespace Graphics
@@ -956,7 +956,7 @@ Namespace Graphics
 End Namespace
 ```
 
-<span data-ttu-id="bdd03-271">下面是当给定类的源代码时生成的输出`Point`，上面所示：</span><span class="sxs-lookup"><span data-stu-id="bdd03-271">Here is the output produced when given the source code for class `Point`, shown above:</span></span>
+<span data-ttu-id="39ed3-271">下面是给定类`Point`的源代码时生成的输出，如下所示：</span><span class="sxs-lookup"><span data-stu-id="39ed3-271">Here is the output produced when given the source code for class `Point`, shown above:</span></span>
 
 ```xml
 <?xml version="1.0"?>
